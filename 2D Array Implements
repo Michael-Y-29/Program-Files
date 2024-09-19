@@ -19,6 +19,7 @@ def deleting_name(row,col):
 
 
 
+
 #Queation2:
 max = 0 
 for i in range(4): 
