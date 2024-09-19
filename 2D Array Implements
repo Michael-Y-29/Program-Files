@@ -1,0 +1,91 @@
+#Question1:
+col = 5
+array = [[" "]*col]*row
+for row in array:
+    print(row)
+
+#Add name to the array
+def adding_name(row,col):
+    row = input("Enter the row number:")
+    col = input("Enter the colum number:")
+    array[row][col] = input("Please enter name of the student")
+    return (array)
+# Delete name
+def deleting_name(row,col): 
+  row = input("Enter the row number:") 
+  col = input("Enter the colum number:") 
+  array[row][col] = " " 
+  return (array) 
+
+
+
+#Queation2:
+max = 0 
+for i in range(4): 
+    for j in range(4): 
+        if array[i][j] > max: 
+            max = array[i][j] 
+print(max)
+
+
+#Question3:
+import random
+i = 0
+row = 6
+col = 6
+array = [[" "]*col]*row
+for row in array:
+    array[i] = random.randint(1,10)
+    i = i+1
+    print(row)
+
+def total(total):
+    total = 0
+    row = int(input("Please enter the row number: "))
+    for i in range (6):
+        total = total + array[row][i]
+    return total
+
+  def total(total):
+    total = 0
+    col = int(input("Please enter the colmun number: "))
+    for i in range (6):
+        total = total + array[i][col]
+    return total
+
+    #Question4
+win = False
+moves = 0
+board = [
+    [" "," "," "],
+    [" "," "," "],
+    [" "," "," "]
+]
+
+for i in range (9):
+    row = int(input("Please enter the row number: "))
+    col = int(input("Please enter the column number: "))
+    board[row][col] = input("Please enter your move:")
+    moves = moves + 1
+    while moves <=9:
+        if board[0][0] == board[0][1] == board[0][2]:   
+            win = True
+        elif board[1][0] == board[1][1] == board[1][2]:
+            win = True
+        elif board[2][0] == board[2][1] == board[2][2]:
+            win = True
+        elif board[0][0] == board[1][0] == board[2][0]:
+            win = True
+        elif board[0][1] == board[1][1] == board[2][1]:
+            win = True
+        elif board[0][2] == board[1][2] == board[2][2]:
+            win = True
+        if moves == 9 and win == "False":
+            break
+    if win == "True":
+        print("You win !!!")
+     
+
+
+
+    #Question5
