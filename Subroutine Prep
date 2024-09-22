@@ -1,0 +1,71 @@
+#Question 1:
+num = int(input("Please enter the main number:")) 
+mult1 = int(input("Please enter the start number: ")) 
+mult2 = int(input("Please enter the ending number:")) 
+name = input("Please enter your name: ") 
+def times_table(num,mult1,mult2,name): 
+    print("Hi,",name,"Here is your times table:") 
+    for i in range (mult2-mult1+1): 
+        total = 0 
+        total = num*mult1 
+        mult1 = mult1 + 1 
+        print(num," *",mult1, "=",total) 
+times_table(num,mult1,mult2,name) 
+
+
+#Question 3:
+attempt = 1 
+def getPword(attempt): 
+    status = False 
+    while status == False: 
+        while attempt == 1: 
+            password1 = input("Please enter your password") 
+            while len(password1) < 6 or len(password1) > 8: 
+                password1 = input("Invalid length, try again:") 
+            attempt = attempt + 1 
+        while attempt == 2: 
+            password2 = input("Please re-enter the password:") 
+            if password2 != password1: 
+                print("The two password are different") 
+            else: 
+                status = True 
+                print("Congradulation, the new password is set") 
+                break 
+getPword(attempt) 
+
+
+#Question 4:
+def park_car(array):  
+    empty = False  
+    while empty == False:  
+        row = int(input("Please enter the row number:"))  
+        column = int(input("Please enter the column"))  
+        reg = input("please enter your car reg: ")  
+        if array[row][column] != " ":  
+            print("This space is not free, please select another one.")  
+        else:  
+            empty = True  
+            array[row][column] = reg  
+            print("The car is now parked in",row,",",column)  
+            break  
+park_car(array) 
+
+ 
+
+ def remove_car(array):  
+    reg = input("Please enter your car registration")  
+    for i in range(10):  
+        for j in range(6):  
+            if array[i][j] == reg:  
+                print("Your car is find")  
+                array[i][j] == " "  
+remove_car(array) 
+
+ 
+def car_grid(array): 
+    print(array) 
+car_grid(array) 
+ 
+
+
+ 
